@@ -42,6 +42,12 @@ variable "tags" {
   type        = map(string)
 }
 
+variable "recovery_window_in_days" {
+  default     = null
+  description = "Number of days to keep persist old secrets before permanently deleting defaults to terraform default"
+  type        = number
+}
+
 ########################################
 # Secret Notification Rules
 ########################################
